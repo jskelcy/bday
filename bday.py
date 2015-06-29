@@ -12,12 +12,12 @@ def get_whole_years(birth_year):
     # your first whole calendar year is your second year of life
     this_year = int(date.today().year)
     # how many calendar years have you been alive
-    calendar_age = (this_year - birth_year) + 1
+    calendar_age = (this_year - birth_year) - 1
     # what was the first full calendar year you were alive
-    first_whole_year = this_year - calendar_age + 1
+    first_whole_year = this_year - calendar_age
 
     total_days = 0
-    for year in range(first_whole_year, (this_year - 1)):
+    for year in range(first_whole_year, this_year):
         if is_leap_year(year):
             total_days = total_days + 366
         else :
